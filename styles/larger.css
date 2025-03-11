@@ -12,10 +12,6 @@
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 
-    body > * {
-        font-family: "Nunito Sans", sans-serif;
-    }
-
     header{
         display: flex;
         justify-content: center;
@@ -23,10 +19,6 @@
         width: 100%;
         flex-wrap: wrap;
         padding: 1.5rem 0 0 0;
-    }
-
-    h1, h2, h3 {
-        font-family: "Halant", sans-serif;
     }
 
     header h1{
@@ -102,6 +94,10 @@
 
     main .container:nth-of-type(2){
         margin-left: 1%;
+    }
+
+    #course-work ul{
+        padding: 1rem 0;
     }
 
     figure{
