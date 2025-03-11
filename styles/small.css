@@ -23,13 +23,15 @@ header{
     background-color: antiquewhite;
 }
 
-header h1{
+header p{
     display: flex;
     justify-self: center;
     align-self: center;
     margin-left: 0.5rem;
     font-size: x-large;
     text-align: center;
+    font-family: "Halant", sans-serif;
+    font-weight: 700;
 }
 
 a{
