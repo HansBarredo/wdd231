@@ -75,9 +75,10 @@
         flex-wrap: wrap;
     }
 
-    main h2{
+    main h1{
         display:inline-block;
         width: 100%;
+        font-size: x-large;
     }
 
     .container{
