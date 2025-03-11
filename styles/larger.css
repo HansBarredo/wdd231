@@ -81,6 +81,10 @@
         font-size: x-large;
     }
 
+    .active::before{
+        content: "📍"
+    }
+
     .container{
         display: inline-block;
         width: 49%;
