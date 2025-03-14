@@ -124,7 +124,10 @@ h2{
 .container img{
     display: flex;
     justify-self: center;
+    width: 100%;
+    height: auto;
     margin-bottom: 0.5rem;
+    padding: 0 0.5rem;
 }
 
 .container figcaption{
@@ -154,6 +157,11 @@ h2{
     color: black;
     background-color: rgb(171, 171, 171);
 }
+
+#filter-container p {
+    text-align: center;
+    padding-top: 1rem;
+}
 .courses-list{
     width: 100%;
     display: flex;
@@ -168,6 +176,15 @@ h2{
     background-color: rgb(171, 171, 171);
     padding: 1rem 0;
     color: black;
+}
+
+.cards.completed{
+    background-color: antiquewhite;
+    color: black;
+}
+
+.cards.completed::before{
+    content: '✔️';
 }
 
 footer {

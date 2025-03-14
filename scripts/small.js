@@ -9,7 +9,7 @@ const courses = [
       technology: [
           'Python'
       ],
-      completed: false
+      completed: true
   },
   {
       subject: 'WDD',
@@ -22,7 +22,7 @@ const courses = [
           'HTML',
           'CSS'
       ],
-      completed: false
+      completed: true
   },
   {
       subject: 'CSE',
@@ -34,7 +34,7 @@ const courses = [
       technology: [
           'Python'
       ],
-      completed: false
+      completed: true
   },
   {
       subject: 'CSE',
@@ -46,7 +46,7 @@ const courses = [
       technology: [
           'C#'
       ],
-      completed: false
+      completed: true
   },
   {
       subject: 'WDD',
@@ -60,7 +60,7 @@ const courses = [
           'CSS',
           'JavaScript'
       ],
-      completed: false
+      completed: true
   },
   {
       subject: 'WDD',
@@ -79,7 +79,7 @@ const courses = [
 ]
 function renderCards(courses) {
     const html = courses.map(
-      (course) => `<a class="cards" href="#">${course.subject} ${course.number}</a>`
+      (course) => `<a class="cards ${course.completed ? 'completed' : ''}"  href="#">${course.subject} ${course.number}</a>`
     );
     document.querySelector(".courses-list").innerHTML = html.join("");
 }
@@ -114,12 +114,22 @@ function filterCourses(filter) {
     filteredCourses = courses;
   }
 
+
+  const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
+  document.getElementById("total-credits").textContent = totalCredits;
+
   renderCards(filteredCourses);
 }
+
+
 
 cseLink.addEventListener("click", () => filterCourses("CSE"));
 wddLink.addEventListener("click", () => filterCourses("WDD"));
 allLink.addEventListener("click", () => filterCourses("ALL"));
+
+document.addEventListener("DOMContentLoaded", () => {
+  filterCourses("ALL");
+});
 
 const modified = document.querySelector("#modified");
 
@@ -127,4 +137,5 @@ let oLastModif = new Date(document.lastModified);
 
 modified.innerHTML = `Last Modification: <span class="last-mod">${oLastModif.toLocaleString()}</span>`;
 
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
