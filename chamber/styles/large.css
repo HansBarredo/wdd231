@@ -30,7 +30,7 @@
         color: var(--secondary-color);
         margin-left: 0.5rem;
         margin-right: 2rem;
-        font-size: x-large;
+        font-size: xx-large;
         font-weight: 700;
         text-align: left;
         font-family: "Cinzel", serif;
@@ -97,6 +97,10 @@
     #navigation li a:hover{
         color: var(--accent-color);
     }
+
+    main{
+        margin: 2rem;
+    }
     #business-list-card.show{
         display: grid;
         grid-template-columns: repeat(4,1fr);
@@ -129,7 +133,7 @@
         background-color: var(--primary-color);
         border: 0;
         border-collapse: collapse;
-        margin: 2rem;
+
     }
 
     #business-list-table.show tr:nth-child(even){
