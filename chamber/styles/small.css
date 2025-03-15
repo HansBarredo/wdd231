@@ -40,7 +40,7 @@
     }
     
     #text-logo{
-        width: 45%;
+        width: 40%;
         color: var(--secondary-color);
         margin-left: 0.5rem;
         margin-right: 2rem;
@@ -182,7 +182,8 @@
 
     .business-card{
         display: flex;
-        width: 75%;
+        width: 300px;
+        height: 550px;
         flex-direction: column;
         gap: 0.5rem;
         background-color: var(--primary-color);
@@ -250,7 +251,7 @@
     footer {
         display: flex;
         flex-direction: column;
-        height: 100%;
+        min-height: 100px;
         width: auto;
         background-color: var(--primary-color);
         color: var(--secondary-color);
