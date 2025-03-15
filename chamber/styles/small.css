@@ -183,7 +183,7 @@
     .business-card{
         display: flex;
         width: 300px;
-        height: 550px;
+        height: 500px;
         flex-direction: column;
         gap: 0.5rem;
         background-color: var(--primary-color);
@@ -193,8 +193,8 @@
     }
 
     .business-card img{
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         object-fit: contain;
         margin-bottom: 1rem;
         display: block;
