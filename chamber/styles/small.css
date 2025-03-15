@@ -112,7 +112,14 @@
         
     }
     
-    #navigation ul{
+    #navigation ul.show{
+        display: flex;
+        position: relative;
+        list-style: none;
+    }
+
+    #navigation ul.hide{
+        display: none;
         position: relative;
         list-style: none;
     }

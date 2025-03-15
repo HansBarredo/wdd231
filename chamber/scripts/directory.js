@@ -63,6 +63,7 @@ function displayBusinessesTable(businesses) {
 
 const mainnav = document.querySelector('#navigation');
 const hambutton = document.querySelector('#menu');
+const navList = document.querySelector('#nav-list')
 
 document.addEventListener("DOMContentLoaded", () => {
   mainnav.classList.remove("show");
@@ -72,11 +73,13 @@ document.addEventListener("DOMContentLoaded", () => {
 hambutton.addEventListener('click', () => {
   mainnav.classList.toggle('show');
   hambutton.classList.toggle('show');
+  navList.classList.remove('hide');
 });
 
 document.addEventListener('click', e =>{
     if (!mainnav.contains(e.target) && e.target !==hambutton){
-        mainnav.classList.remove('show')
+        mainnav.classList.remove('show'),
+        navList.classList.add('hide')
     }
 })
 
