@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Trans-Asia Phils. Manufacturing Industries Corp.",
+    "address": "Antipolo, Rizal, Philippines",
+    "phone_number": "Not Available",
+    "website_url": "Not Available",
+    "image_file_name": "Transasia-Phils-Manufacturing-Industries-Corporation-logo.png",
+    "membership_level": "Gold"
+  },
+  {
+    "name": "TaskUs",
+    "address": "Sumulong Highway, Antipolo, Rizal, Philippines",
+    "phone_number": "+63 2 8249 8255",
+    "website_url": "https://www.taskus.com/en-us/locations/philippines/rizal/",
+    "image_file_name": "task-us-logo.png",
+    "membership_level": "Gold"
+  },
+  {
+    "name": "Movate",
+    "address": "East Gate Business Center, Antipolo City, Rizal, Philippines",
+    "phone_number": "Not Available",
+    "website_url": "https://www.movate.com/movate-expands-its-operations-in-philippines-launches-new-delivery-center-in-antipolo-city-manila/",
+    "image_file_name": "movate-logo.png",
+    "membership_level": "Bronze"
+  },
+  {
+    "name": "MAX-C Logistics",
+    "address": "Antipolo City, Rizal, Philippines",
+    "phone_number": "+63 995 055 6291",
+    "website_url": "https://www.facebook.com/p/MAX-C-Logistics-100078845827396/",
+    "image_file_name": "max-c-logo.png",
+    "membership_level": "Silver"
+  },
+  {
+    "name": "Become Digital Today",
+    "address": "Antipolo, Rizal, Philippines",
+    "phone_number": "Not Available",
+    "website_url": "https://techbehemoths.com/company/become-digital-today",
+    "image_file_name": "become-digital-today-logo.png",
+    "membership_level": "Bronze"
+  },
+  {
+    "name": "Dthree Digital",
+    "address": "22 Talisay, Taytay, Rizal, Philippines",
+    "phone_number": "Not Available",
+    "website_url": "https://dthree.com.ph/",
+    "image_file_name": "d-three-logo.png",
+    "membership_level": "Silver"
+  },
+  {
+    "name": "i-Build.PH Web Solutions and Services",
+    "address": "106 Gen. B. G. Molina St, Marikina, Metro Manila, Philippines",
+    "phone_number": "+63 2 8646 0016",
+    "website_url": "https://www.i-build.ph/",
+    "image_file_name": "i-build-logo.jpg",
+    "membership_level": "Bronze"
+  },
+  {
+    "name": "Loreland Farm Resort",
+    "address": "Sitio Loreland, Barangay San Roque, Antipolo City, Rizal, Philippines",
+    "phone_number": "+63 2 8697 0000",
+    "website_url": "https://www.loreland.com.ph/",
+    "image_file_name": "loreland-logo.jpg",
+    "membership_level": "Silver"
+  },
+  {
+    "name": "First Pacific Leadership Academy",
+    "address": "Sumulong Highway, Antipolo City, Rizal, Philippines",
+    "phone_number": "+63 2 8659 6000",
+    "website_url": "https://www.fpacademy.net/",
+    "image_file_name": "first-pacific-leadership-academy-logo.png",
+    "membership_level": "Gold"
+  },
+  {
+    "name": "Assumption Antipolo",
+    "address": "Sumulong Highway, Antipolo City, Rizal, Philippines",
+    "phone_number": "+63 2 8697 6000",
+    "website_url": "https://www.assumptionantipolo.edu.ph/",
+    "image_file_name": "assumption-logo.png",
+    "membership_level": "Gold"
+  }
+]
