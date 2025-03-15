@@ -34,13 +34,13 @@
     }
     
     #logo{
-        display: none;
-        width: 20%;
-        height: auto;
+        display: flex;
+        width: 75px;
+        height: 75px;
     }
     
     #text-logo{
-        width: 55%;
+        width: 45%;
         color: var(--secondary-color);
         margin-left: 0.5rem;
         margin-right: 2rem;
@@ -65,6 +65,10 @@
         font-size: 42px;
         margin-left: 1.5rem;
         text-align: center;
+    }
+
+    #menu{
+        margin-left: auto;
     }
     
     #menu.hide::before{
@@ -124,6 +128,19 @@
         color: var(--accent-color);
     }
     
+    .active::after{
+        content: "<<<";
+        font-weight: 700;
+        margin-left: 0.5;
+        color: var(--accent-color);
+    }
+
+    .active{
+        display: flex;
+        gap: 1rem;
+    }
+
+
     main h1{
         margin: 1rem;
         color: var(--primary-color);
