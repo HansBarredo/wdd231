@@ -60,6 +60,7 @@
     }
     
     #light-dark::before{
+        display: none;
         content: "☀️";
         font-size: 42px;
         margin-left: 1.5rem;
@@ -72,6 +73,13 @@
         margin-left: 1.5rem;
         text-align: center;
         
+    }
+
+    #menu.show::before{
+        content: "x";
+        font-size: 42px;
+        margin-left: 1.5rem;
+        text-align: center;
     }
     
     #navigation{
@@ -252,7 +260,7 @@
     }
 
     .icons img{
-        width:50px;
+        width:42px;
         margin-top: 0.5rem;
     }
 
