@@ -27,7 +27,7 @@ function displayBusinessesCard(businesses) {
         businessCard.classList.add('business-card');
         
         businessCard.innerHTML = `
-            <img loading="lazy" src="images/${business.image_file_name}" alt="${business.name}" class="business-image">
+            <img src="images/${business.image_file_name}" alt="${business.name}" class="business-image">
             <h3>${business.name}</h3>
             <p><strong>Address:</strong> ${business.address}</p>
             <p><strong>Phone:</strong> ${business.phone_number || 'N/A'}</p>

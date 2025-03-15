@@ -6,6 +6,10 @@
     --heading-font: "Cinzel", serif;
     --body-font: "DM Sans", sans-serif;
     }
+
+    html {
+        font-display: swap;
+    }
     
     *{
         box-sizing: border-box;
