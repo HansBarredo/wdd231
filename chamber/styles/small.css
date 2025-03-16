@@ -14,6 +14,7 @@
     }
     
     body{
+        max-width: 100vw;
         font-family: var(--body-font);
         background-color: var(--secondary-color);
     }
@@ -35,8 +36,8 @@
     
     #logo{
         display: flex;
-        width: 75px;
-        height: 75px;
+        width: 50px;
+        height: 50px;
     }
     
     #text-logo{
@@ -44,7 +45,7 @@
         color: var(--secondary-color);
         margin-left: 0.5rem;
         margin-right: 2rem;
-        font-size: x-large;
+        font-size: large;
         font-weight: 700;
         text-align: left;
         font-family: "Cinzel", serif;
@@ -285,6 +286,7 @@
 
     .icons img{
         width:42px;
+        height: auto;
         margin-top: 0.5rem;
     }
 
