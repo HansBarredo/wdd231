@@ -6,7 +6,7 @@ async function fetchBusinesses() {
         }
         const businesses = await response.json();
         
-        console.log('Fetched Businesses:', businesses); // Print the JSON data to the console
+        console.log('Fetched Businesses:', businesses); 
 
         displayBusinessesCard(businesses);
         displayBusinessesTable(businesses);
