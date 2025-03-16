@@ -138,7 +138,6 @@
     .active::after{
         content: "<<<";
         font-weight: 700;
-        margin-left: 0.5;
         color: var(--accent-color);
     }
 
