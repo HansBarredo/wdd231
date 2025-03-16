@@ -89,7 +89,7 @@
         
     }
     
-    #navigation ul{
+    #navigation ul.hide{
         display: flex;
         width: auto;
         list-style: none;
