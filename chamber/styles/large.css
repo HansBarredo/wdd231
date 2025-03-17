@@ -181,6 +181,11 @@
         width: 300px;
     }
 
+    footer{
+        width: 100vw;
+        min-height: 100px;
+    }
+
     footer > a{
         width: 300px;
     }
