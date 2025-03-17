@@ -177,4 +177,10 @@
         margin-bottom: 2rem;
     }
 
+    .icons img{
+        width:36px;
+        height: auto;
+        margin-top: 0.5rem;
+    }
+
 }
