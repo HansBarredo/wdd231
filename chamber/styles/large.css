@@ -29,7 +29,7 @@
 
     #text-logo{
         display: flex;
-        max-width: 100%;
+        max-width: 300px;
         color: var(--secondary-color);
         margin-left: 0.5rem;
         margin-right: 2rem;
@@ -37,6 +37,7 @@
         font-weight: 700;
         text-align: left;
         font-family: "Cinzel", serif;
+        justify-content: start;
     }
     
     header > a{

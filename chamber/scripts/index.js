@@ -241,7 +241,7 @@ function displaySpotlight(business) {
         return numbers;
     }
     
-const [randomNumber1, randomNumber2, randomNumber3] = getUniqueRandomNumbers(1, 10, 3);
+const [randomNumber1, randomNumber2, randomNumber3] = getUniqueRandomNumbers(0, 9, 3);
 
     myContainerSpotlight.innerHTML = `
         <div class="spotlight-cards">

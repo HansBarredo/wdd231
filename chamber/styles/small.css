@@ -314,6 +314,7 @@ footer p {
 .image-container {
   position: relative;
   width: 100%;
+  height: 600px;
 }
 
 .image-container > img {
@@ -462,11 +463,16 @@ figcaption {
 }
 
 #weather-forecast > * {
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
 
 #weather-forecast h3 {
   font-size: x-large;
+  text-align: center;
+}
+
+#weather-forecast .info-list-forecast{
+  margin-left: 1rem;
 }
 
 .slider-container-spotlight {
