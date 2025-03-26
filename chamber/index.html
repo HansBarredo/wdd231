@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hans Barredo">
+    <meta name="description" content="The Official Chamber of Commerce website of the City of Antipolo">
+
+    <meta property="og:title" content="Antipolo Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://hansbarredo.github.io/wdd231/chamber/images/Hinulugang-Taktak.webp">
+    <meta property="og:url" content="https://hansbarredo.github.io/wdd231/chamber/directory.html">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Fauna+One&display=swap" as="style">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Fauna+One&display=swap">
+
+    <link rel="preload" href="styles/normalize.css" as="style">
+    <link rel="preload" href="styles/small.css" as="style">
+    <link rel="preload" href="styles/large.css" as="style">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <title>Business Directory | Antipolo Chamber of Commerce</title>
+</head>
+
+<body>
+    <header>
+        <a id="logo" href="#"><img src="images/favicon_io/android-chrome-512x512.png"
+                alt="Antipolo Chamber of Commerce Logo"></a>
+        <a id="text-logo" href="#">Antipolo Chamber of Commerce</a>
+        <!-- <a id="light-dark" class="hide" href="#"></a> -->
+        <a id="menu" class="hide" href="#" aria-label="Hamburger menu"></a>
+        <nav id="navigation" class="hide">
+            <ul id="nav-list" class="hide">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#" >Business Directory</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero-container">
+        <div class="hero-text">
+            <p>Your Business Advocate</p>
+            <a href="" class="action-button">Join Now</a>
+        </div>
+        <div class="image-container">
+            <div class="overlay"></div>
+            <img src="images/city-hall.webp" alt="">
+        </div>
+    </section>
+    <main>
+        <h1>Home</h1>
+        <hr>
+        <div class="container">
+            <section id="events-container">
+                <div class="sub-heading">
+                    <h2>Events</h2>
+                </div>
+                <button id="prev"><</button>
+                <div class="slider-container">
+                    <div class="slider-items">
+                        <div class="events-cards">
+                            <img src="images/assumption-logo.webp" alt="" draggable="false">
+                            <h4>Lorem, ipsum dolor.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis vel unde distinctio,
+                                impedit eius error eligendi quisquam aliquid est. Dolorum ut dicta quas veniam, commodi
+                                beatae voluptates rerum velit praesentium labore dolores, magnam facere, dolorem
+                                similique distinctio! Impedit quis aut corrupti temporibus dicta, sint rem! Iste minima
+                                officiis sint in!</p>
+                        </div>
+                        <div class="events-cards">
+                            <img src="images/i-build-logo.webp" alt="" draggable="false">
+                            <h4>Lorem, ipsum dolor.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis vel unde distinctio,
+                                impedit eius error eligendi quisquam aliquid est. Dolorum ut dicta quas veniam, commodi
+                                beatae voluptates rerum velit praesentium labore dolores, magnam facere, dolorem
+                                similique distinctio! Impedit quis aut corrupti temporibus dicta, sint rem! Iste minima
+                                officiis sint in!</p>
+                        </div>
+                        <div class="events-cards">
+                            <img src="images/loreland-logo.webp" alt="" draggable="false">
+                            <h4>Lorem, ipsum dolor.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis vel unde distinctio,
+                                impedit eius error eligendi quisquam aliquid est. Dolorum ut dicta quas veniam, commodi
+                                beatae voluptates rerum velit praesentium labore dolores, magnam facere, dolorem
+                                similique distinctio! Impedit quis aut corrupti temporibus dicta, sint rem! Iste minima
+                                officiis sint in!</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="next">></button>
+            </section>
+            <section id="current-weather-section">
+                <div id="current-weather">
+                    <div class="sub-heading">
+                        <h2>Current Weather</h2>
+                    </div>
+                    <div>
+                        <div id="weather-info">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="weather-forecast-section">
+                <div id="weather-forecast">
+                    <div class="sub-heading">
+                        <h2>Weather Forecast</h2>
+                    </div>
+                    <div id="forecast-info"></div>
+                </div>
+            </section>
+        </div>
+        <div id="spotlight-container">
+            <div class="sub-heading">
+                <h2>Business Spotlight</h2>
+            </div>
+            <div class="slider-container-spotlight">
+                <div class="slider-items-spotlight">
+                   
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <h3>Antipolo Chamber of Commerce</h3>
+            <p>2nd Floor, Hillside Plaza Building, 23, Sumulong Highway, Barangay Mayamot, Antipolo, 1870</p>
+            <a href="tel:+63286471818">(02) 8647 1818</a>
+            
+        </div>
+        <div class="icons">
+            <a href="https://facebook.com"><img src="images/facebook.webp" alt="Facebook logo" width="36"
+                    height="36"></a>
+            <a href="https://instagram.com"><img src="images/social.webp" alt="Instagram logo" width="36"
+                    height="36"></a>
+            <a href="https://x.com"><img src="images/twitter.webp" alt="x logo" width="36" height="36"></a>
+        </div>
+        <div class="copy-container">
+            <p>&copy; <span id="copyright-year"></span> | Hans Barredo | Philippines</p>
+            <span id="modified"></span>
+        </div>
+
+    </footer>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
