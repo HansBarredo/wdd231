@@ -132,8 +132,6 @@ const sliderEvents = document.querySelector(".slider-container");
 const arrowBtns = document.querySelectorAll("#events-container button")
 const firstCardWidth = sliderEvents.querySelector(".events-cards").offsetWidth;
 
-let active = 0
-
 let isDragging;
 
 arrowBtns.forEach(btn => {
@@ -195,9 +193,7 @@ const draggingSpotlight = (e) => {
     if (!isDraggingSpotlight) return;
 
     const x = e.touches ? e.touches[0].clientX : e.clientX;
-    const deltaX = x - startX; 
-    const rawScrollAmount = startScrollLeft - deltaX;
-    const scrollAmount =  Math.round(rawScrollAmount / firstCardWidth) * firstCardWidth;
+    const scrollAmount = startScrollLeft - (x - startX);
     sliderSpotlight.scrollLeft = scrollAmount;
 
     e.preventDefault();
@@ -225,15 +221,17 @@ async function fetchBusinesses() {
         }
         const businesses = await response.json();
         
-        console.log('Fetched Businesses:', businesses); // Debugging
-        
-        displaySpotlight(businesses); 
+        console.log('Fetched Businesses:', businesses); 
+
+        displaySpotlight(businesses);
+        displaySpotlight(businesses);
     } catch (error) {
         console.error('Error fetching businesses:', error);
     }
 }
 
 document.addEventListener('DOMContentLoaded', fetchBusinesses);
+
 
 const myContainerSpotlight = document.querySelector('.slider-items-spotlight');
 
@@ -275,7 +273,6 @@ function displaySpotlight(businessList) {
         </div>
     `).join('');
 }
-
 const modified = document.querySelector("#modified");
 
 let oLastModif = new Date(document.lastModified);
@@ -283,3 +280,5 @@ let oLastModif = new Date(document.lastModified);
 modified.innerHTML = `Last Modification: <span class="last-mod">${oLastModif.toLocaleString()}</span>`;
 
 document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+

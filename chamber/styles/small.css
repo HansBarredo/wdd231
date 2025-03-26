@@ -464,6 +464,11 @@ figcaption {
   font-size: x-large;
   color: var(--secondary-color);
 }
+figure img{
+  display: flex;
+  justify-self: center;
+  width: 100px;
+}
 
 .info-list-forecast {
   display: flex;
