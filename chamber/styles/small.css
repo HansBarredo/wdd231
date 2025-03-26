@@ -136,13 +136,13 @@ header > a {
   color: var(--accent-color);
 }
 
-.active::after {
+li .active::after {
   content: "<<<";
   font-weight: 700;
   color: var(--accent-color);
 }
 
-.active {
+li .active {
   display: flex;
   gap: 1rem;
 }
@@ -314,7 +314,6 @@ footer p {
 .image-container {
   position: relative;
   width: 100%;
-  height: 600px;
 }
 
 .image-container > img {
@@ -416,6 +415,20 @@ footer p {
   background-color: var(--primary-color);
 }
 
+.events-cards img{
+  width: 150px;
+  height: auto;
+}
+
+.events-cards p{
+  font-size: medium;
+}
+
+.events-cards h4{
+  margin: 1rem 0;
+}
+
+
 .slider-container.dragging .events-cards {
   cursor: grabbing;
   user-select: none;
@@ -434,7 +447,7 @@ figcaption {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 1rem;
+  padding: 2rem;
   align-items: center;
 }
 

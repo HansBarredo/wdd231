@@ -13,8 +13,8 @@ async function apiFetchCurrentWeather() {
         const response = await fetch(urlWeatherCurrent);
         if (response.ok) {
             const dataWeather = await response.json();
-            console.log(dataWeather); // Debugging: Check API response in console
-            displayWeather(dataWeather); // Now calling the function
+            console.log(dataWeather); 
+            displayWeather(dataWeather); 
         } else {
             throw Error(await response.text());
         }
@@ -42,7 +42,7 @@ function displayWeather(dataWeather) {
     myContainerWeather.innerHTML = `
         <h3>Antipolo CIty</h3>
         <figure>
-            <img src="https://openweathermap.org/img/wn/04d@2x.png"></img>
+            <img src="https://openweathermap.org/img/wn/${(dataWeather.weather[0].icon)}.png"></img>
             <figcaption>${(dataWeather.weather[0].description)}</figcaption>
         </figure>
         <br>
@@ -67,8 +67,8 @@ async function apiWeatherForecast() {
         const response = await fetch(urlWeatherForecast);
         if (response.ok) {
             const dataForecast = await response.json();
-            console.log(dataForecast); // Debugging: Check API response in console
-            displayForecast(dataForecast); // Now calling the function
+            console.log(dataForecast); 
+            displayForecast(dataForecast);
         } else {
             throw Error(await response.text());
         }
@@ -129,8 +129,19 @@ document.addEventListener('click', e =>{
 })
 
 const sliderEvents = document.querySelector(".slider-container");
+const arrowBtns = document.querySelectorAll("#events-container button")
+const firstCardWidth = sliderEvents.querySelector(".events-cards").offsetWidth;
 
-let isDragging
+let active = 0
+
+let isDragging;
+
+arrowBtns.forEach(btn => {
+    btn.addEventListener("click", () =>{
+        sliderEvents.scrollLeft += btn.id ==="prev" ? -firstCardWidth : firstCardWidth;
+    })
+})
+
 const dragStart = (e) => {
     isDragging = true;
     sliderEvents.classList.add("dragging");
@@ -144,7 +155,9 @@ const dragging = (e) => {
     if (!isDragging) return;
 
     const x = e.touches ? e.touches[0].clientX : e.clientX;
-    const scrollAmount = startScrollLeft - (x - startX);
+    const deltaX = x - startX; 
+    const rawScrollAmount = startScrollLeft - deltaX;
+    const scrollAmount =  Math.round(rawScrollAmount / firstCardWidth) * firstCardWidth;
     sliderEvents.scrollLeft = scrollAmount;
 
     e.preventDefault();
@@ -182,7 +195,9 @@ const draggingSpotlight = (e) => {
     if (!isDraggingSpotlight) return;
 
     const x = e.touches ? e.touches[0].clientX : e.clientX;
-    const scrollAmount = startScrollLeft - (x - startX);
+    const deltaX = x - startX; 
+    const rawScrollAmount = startScrollLeft - deltaX;
+    const scrollAmount =  Math.round(rawScrollAmount / firstCardWidth) * firstCardWidth;
     sliderSpotlight.scrollLeft = scrollAmount;
 
     e.preventDefault();
@@ -210,10 +225,9 @@ async function fetchBusinesses() {
         }
         const businesses = await response.json();
         
-        console.log('Fetched Businesses:', businesses); 
-
-        displaySpotlight(businesses);
-        displaySpotlight(businesses);
+        console.log('Fetched Businesses:', businesses); // Debugging
+        
+        displaySpotlight(businesses); 
     } catch (error) {
         console.error('Error fetching businesses:', error);
     }
@@ -221,53 +235,51 @@ async function fetchBusinesses() {
 
 document.addEventListener('DOMContentLoaded', fetchBusinesses);
 
-
 const myContainerSpotlight = document.querySelector('.slider-items-spotlight');
 
-function displaySpotlight(business) {
+function displaySpotlight(businessList) {
+    if (!Array.isArray(businessList)) {
+        console.error("Error: businessList is not an array", businessList);
+        return;
+    }
 
-    function getUniqueRandomNumbers(min, max, count) {
-        if (max - min + 1 < count) {
-            throw new Error("Range is too small for the required unique numbers.");
-        }
-    
-        let numbers = [];
-        while (numbers.length < count) {
-            let randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
-            if (!numbers.includes(randomNum)) {
-                numbers.push(randomNum);
+    function getUniqueRandomBusinesses(count, businessArray) {
+        const eligibleBusinesses = businessArray
+            .map((bus, index) => ({ ...bus, index }))
+            .filter(bus => bus.membership_level === "Gold" || bus.membership_level === "Silver");
+
+        let selectedBusinesses = [];
+        let usedIndices = new Set();
+
+        while (selectedBusinesses.length < count) {
+            let randomIndex = Math.floor(Math.random() * eligibleBusinesses.length);
+            if (!usedIndices.has(randomIndex)) {
+                selectedBusinesses.push(eligibleBusinesses[randomIndex]);
+                usedIndices.add(randomIndex);
             }
         }
-        return numbers;
-    }
-    
-const [randomNumber1, randomNumber2, randomNumber3] = getUniqueRandomNumbers(0, 9, 3);
 
-    myContainerSpotlight.innerHTML = `
+        return selectedBusinesses;
+    }
+
+    const selectedBusinesses = getUniqueRandomBusinesses(3, businessList);
+
+    myContainerSpotlight.innerHTML = selectedBusinesses.map(business => `
         <div class="spotlight-cards">
-            <img src="images/${business[randomNumber1].image_file_name}" alt="${business[randomNumber1].name} logo" class="business-image" width="150" height="150">
-            <h3>${business[randomNumber1].name}</h3>
-            <p><strong>Address:</strong> ${business[randomNumber1].address}</p>
-            <p><strong>Phone:</strong> ${business[randomNumber1].phone_number || 'N/A'}</p>
-            <p><a href="${business[randomNumber1].website_url}" target="_blank">Visit Website</a></p>
-            <p><strong>Membership Level:</strong> ${business[randomNumber1].membership_level}</p>
+            <img src="images/${business.image_file_name}" alt="${business.name} logo" class="business-image" width="150" height="150">
+            <h3>${business.name}</h3>
+            <p><strong>Address:</strong> ${business.address}</p>
+            <p><strong>Phone:</strong> ${business.phone_number || 'N/A'}</p>
+            <p><a href="${business.website_url}" target="_blank">Visit Website</a></p>
+            <p><strong>Membership Level:</strong> ${business.membership_level}</p>
         </div>
-        <div class="spotlight-cards">
-            <img src="images/${business[randomNumber2].image_file_name}" alt="${business[randomNumber2].name} logo" class="business-image" width="150" height="150">
-            <h3>${business[randomNumber2].name}</h3>
-            <p><strong>Address:</strong> ${business[randomNumber2].address}</p>
-            <p><strong>Phone:</strong> ${business[randomNumber2].phone_number || 'N/A'}</p>
-            <p><a href="${business[randomNumber2].website_url}" target="_blank">Visit Website</a></p>
-            <p><strong>Membership Level:</strong> ${business[randomNumber2].membership_level}</p>
-        </div>
-        <div class="spotlight-cards">
-           <img src="images/${business[randomNumber3].image_file_name}" alt="${business[randomNumber3].name} logo" class="business-image" width="150" height="150">
-            <h3>${business[randomNumber3].name}</h3>
-            <p><strong>Address:</strong> ${business[randomNumber3].address}</p>
-            <p><strong>Phone:</strong> ${business[randomNumber3].phone_number || 'N/A'}</p>
-            <p><a href="${business[randomNumber3].website_url}" target="_blank">Visit Website</a></p>
-            <p><strong>Membership Level:</strong> ${business[randomNumber3].membership_level}</p>
-        </div>
-        
-    `;
+    `).join('');
 }
+
+const modified = document.querySelector("#modified");
+
+let oLastModif = new Date(document.lastModified);
+
+modified.innerHTML = `Last Modification: <span class="last-mod">${oLastModif.toLocaleString()}</span>`;
+
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
