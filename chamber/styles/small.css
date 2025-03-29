@@ -560,6 +560,10 @@ figure img{
 
 /* Join Page */
 
+#join-header{
+  font-size: x-large;
+}
+
 form{
   display: flex;
   flex-direction: column;
@@ -638,7 +642,7 @@ select{
 #memebrship-container h2{
   background-color: var(--primary-color);
   padding:1rem;
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 #cards-container{
