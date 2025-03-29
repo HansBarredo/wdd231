@@ -554,3 +554,118 @@ figure img{
   width: 100%;
 }
 
+/* Join Page */
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--primary-color);
+  margin: 2rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.form-control input{
+  height: 42px;
+  padding: 0.5rem;
+}
+
+.form-control{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-control:last-of-type{
+  background-color: aqua;
+  margin-bottom:0;
+}
+
+input{
+  border-style: groove;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+select{
+  height: 42px;
+}
+
+.membership-selection{
+  display: flex;
+  flex-direction: column;
+}
+
+.business-description{
+  display: flex;
+  flex-direction: column;
+}
+
+.business-description textarea{
+  height: 200px;
+  padding: 0.5rem;
+}
+
+#submit{
+  margin: 1rem 0;
+  height: 42px;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.incorrect{
+  border-style: groove;
+  border-color: rgb(255, 44, 44);
+}
+
+#memebrship-container h2{
+  background-color: var(--primary-color);
+  padding:1rem;
+  font-size: xx-large;
+}
+
+#cards-container{
+  padding: 1rem;
+
+
+}
+
+.membership-card{
+  background-color: var(--primary-color);
+  margin: 1rem 0;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.openButton{
+  margin-top: 1rem;
+  width: auto;
+  height: 50px;
+  padding: 1rem;
+  justify-self: center;
+}
+
+dialog{
+  justify-self: center;
+  align-self: center;
+  height: auto;
+  width: auto;
+  padding: 2rem;
+}
+
+.closeButton{
+  margin-top: 1rem;
+}
+
+dialog h3{
+  margin-bottom: 1rem;
+}
+
+
+

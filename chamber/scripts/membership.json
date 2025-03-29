@@ -1,0 +1,18 @@
+[
+  {
+    "level": "Non-Profit Membership",
+    "description": "For non-profit organizations. No membership fee required."
+  },
+  {
+    "level": "Bronze Membership",
+    "description": "Basic membership with limited benefits and access to standard resources."
+  },
+  {
+    "level": "Silver Membership",
+    "description": "Intermediate membership with additional benefits, including access to premium resources and limited support."
+  },
+  {
+    "level": "Gold Membership",
+    "description": "Premium membership with full benefits, priority support, and exclusive access to events and resources."
+  }
+]
