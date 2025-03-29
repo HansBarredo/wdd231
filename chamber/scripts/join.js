@@ -26,11 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-
-
-
-
 async function fetchMemberships() {
     try {
         const response = await fetch('scripts/membership.json');
@@ -88,4 +83,116 @@ function displayMembershipCards(memberships) {
         });
     });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("timestamp").value = new Date().toLocaleString();
+});
+
+const form = document.getElementById("form");
+const fname_input = document.getElementById("fname");
+const lname_input = document.getElementById("lname");
+const orgTitle_input = document.getElementById("organization-title");
+const email_input = document.getElementById("email");
+const contact_input = document.getElementById("tel");
+const orgName_input = document.getElementById("organization");
+const membership_input = document.getElementById("membership-level");
+const orgDescription_input = document.getElementById("organization-description");
+
+const OrgTitleRegEx = /^[A-Za-z\- ]{7,}$/;
+const phoneRegex = /^\+?\d{1,4}?[-.\s]?\(?\d{1,4}?\)?[-.\s]?\d{1,9}[-.\s]?\d{1,9}[-.\s]?\d{1,9}$/;
+
+form.addEventListener('submit', (e) => {
+    let errors = getSignupFormErrors();
+
+    console.log(errors);
+
+    if (errors.length > 0) {
+        e.preventDefault();
+    }
+});
+
+function getSignupFormErrors() {
+    let errors = [];
+
+    if (fname_input.value.trim() === '') {
+        errors.push('First name is required');
+        fname_input.classList.add('incorrect');
+    }
+
+    if (lname_input.value.trim() === '') {
+        errors.push('Last name is required');
+        lname_input.classList.add('incorrect');
+    }
+
+    if (orgTitle_input.value.trim() === '' || !OrgTitleRegEx.test(orgTitle_input.value.trim())) {
+        errors.push('Organization title is required');
+        orgTitle_input.classList.add('incorrect');
+    }
+
+    if (email_input.value.trim() === '') {
+        errors.push('Email is required');
+        email_input.classList.add('incorrect');
+    }
+
+    if (contact_input.value.trim() === '' || !phoneRegex.test(contact_input.value.trim())) {
+        errors.push('Contact number is required');
+        contact_input.classList.add('incorrect');
+    }
+
+    if (orgName_input.value.trim() === '') {
+        errors.push('Organization name is required');
+        orgName_input.classList.add('incorrect');
+    }
+
+    if (membership_input.value.trim() === '') {
+        errors.push('Membership level is required');
+        membership_input.classList.add('incorrect');
+    }
+
+    if (orgDescription_input.value.trim() === '') {
+        errors.push('Organization description is required');
+        orgDescription_input.classList.add('incorrect');
+    }
+
+    return errors;
+}
+function validateField(input, condition) {
+    if (condition) {
+        input.classList.add('valid');
+        input.classList.remove('incorrect');
+    } else {
+        input.classList.add('incorrect');
+        input.classList.remove('valid');
+    }
+}
+
+
+fname_input.addEventListener("input", () => validateField(fname_input, fname_input.value.trim() !== ""));
+lname_input.addEventListener("input", () => validateField(lname_input, lname_input.value.trim() !== ""));
+orgTitle_input.addEventListener("input", () => validateField(orgTitle_input, OrgTitleRegEx.test(orgTitle_input.value.trim())));
+email_input.addEventListener("input", () => validateField(email_input, email_input.value.trim() !== ""));
+contact_input.addEventListener("input", () => validateField(contact_input, phoneRegex.test(contact_input.value.trim())));
+orgName_input.addEventListener("input", () => validateField(orgName_input, orgName_input.value.trim() !== ""));
+membership_input.addEventListener("change", () => validateField(membership_input, membership_input.value !== ""));
+orgDescription_input.addEventListener("input", () => validateField(orgDescription_input, orgDescription_input.value.trim() !== ""));
+
+document.getElementById("form").addEventListener("submit", function (event) {
+    event.preventDefault(); 
+
+    let errors = getSignupFormErrors();
+    console.log(errors);
+
+    if (errors.length === 0) {
+        const formData = new FormData(this);
+        const queryString = new URLSearchParams(formData).toString();
+        window.location.href = `summary.html?${queryString}`;
+    }
+});
+
+let oLastModif = new Date(document.lastModified);
+
+modified.innerHTML = `Last Modification: <span class="last-mod">${oLastModif.toLocaleString()}</span>`;
+
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
 

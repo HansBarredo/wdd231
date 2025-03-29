@@ -95,9 +95,13 @@
                     <br>
                     <div class="business-description">
                         <label for="organization-description">Business/Organization Description:</label>
-                        <textarea id="organization-description" name="organization-description"></textarea>
+                        <textarea id="organization-description" name="organization-description" maxlength="200"></textarea>
                     </div>
                     <input id="submit" type="submit" value="Submit Application">
+                    <div class="timestamp-container">
+                        <label for="timestamp">Form Submitted On:</label>
+                        <input type="text" id="timestamp" name="timestamp" readonly>
+                    </div>
                 </form>
             </section>
             <section id="memebrship-container">
@@ -106,6 +110,7 @@
 
                 </div>
             </section>
+
         </div>
     </main>
     <footer>
