@@ -156,6 +156,7 @@ function getSignupFormErrors() {
 
     return errors;
 }
+
 function validateField(input, condition) {
     if (condition) {
         input.classList.add('valid');
