@@ -180,12 +180,11 @@ document.getElementById("form").addEventListener("submit", function (event) {
     event.preventDefault(); 
 
     let errors = getSignupFormErrors();
-    console.log(errors);
-
+    
     if (errors.length === 0) {
         const formData = new FormData(this);
         const queryString = new URLSearchParams(formData).toString();
-        window.location.href = `summary.html?${queryString}`;
+        window.location.href = `thankyou.html?${queryString}`;
     }
 });
 

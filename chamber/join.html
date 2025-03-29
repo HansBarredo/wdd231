@@ -12,9 +12,9 @@
     <meta property="og:image" content="https://hansbarredo.github.io/wdd231/chamber/images/Hinulugang-Taktak.webp">
     <meta property="og:url" content="https://hansbarredo.github.io/wdd231/chamber/directory.html">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-32x32.png">
+    <link rel="apple-touch-icon"  href="images/favicon_io/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="images/favicon_io/favicon-16x16.png"  type="image/png" sizes="32x32" >
+    <link rel="icon"  href="images/favicon_io/favicon-32x32.png" type="image/png" sizes="16x16">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,7 +54,7 @@
         <div id="join-container">
             <section id="form-container">
                 <h1>Memebership Application</h1>
-                <form id="form" method="GET">
+                <form id="form" action="thankyou.html" method="GET">
                     <div class="form-control">
                         <label for="fname">First Name</label>
                         <input type="text" id="fname" name="fname" autocomplete="given-name" placeholder="First Name">
@@ -83,7 +83,7 @@
                     </div>
                     <br>
                     <div class="membership-selection">
-                        <label for="memebrship-level">Membership Level</label>
+                        <label for="membership-level">Membership Level</label>
                         <select id="membership-level" name="membership-level">
                             <option value="" disabled selected>Select a membership level...</option>
                             <option value="np">NP Membership (Non-Profit, No Fee)</option>
@@ -100,7 +100,7 @@
                     <input id="submit" type="submit" value="Submit Application">
                     <div class="timestamp-container">
                         <label for="timestamp">Form Submitted On:</label>
-                        <input type="text" id="timestamp" name="timestamp" readonly>
+                        <input type="hiddden" id="timestamp" name="timestamp" readonly>
                     </div>
                 </form>
             </section>
