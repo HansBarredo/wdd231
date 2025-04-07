@@ -1,0 +1,68 @@
+{
+    "places": [
+      {
+        "name": "Pinto Art Museum",
+        "address": "1 Sierra Madre St., Grand Heights Subdivision, Antipolo City",
+        "description": "A contemporary art space showcasing a vast collection of modern Filipino art across several galleries set within a Mediterranean-inspired complex. The museum also features beautiful gardens and panoramic views of the city.",
+        "cost": "PHP 250 for adults",
+        "image_url": "pinto-art-museum.webp"
+      },
+      {
+        "name": "Hinulugang Taktak",
+        "address": "Taktak Road, Brgy. Dela Paz, Antipolo City",
+        "description": "A historic waterfall and protected landscape, Hinulugang Taktak is a popular spot for picnics and nature appreciation. Recent rehabilitation efforts have improved its facilities, including a swimming pool and meditation areas.",
+        "cost": "PHP 30",
+        "image_url": "Hinulugang-Taktak.webp"
+      },
+      {
+        "name": "Antipolo Cathedral (Our Lady of Peace and Good Voyage)",
+        "address": "P. Oliveros St., Antipolo City",
+        "description": "A significant pilgrimage site housing the 17th-century image of Our Lady of Peace and Good Voyage. The cathedral attracts numerous devotees, especially during the pilgrimage season.",
+        "cost": "Free",
+        "image_url": "antipolo-cathedral.webp"
+      },
+      {
+        "name": "Cloud 9 Sports and Leisure Club",
+        "address": "Sumulong Highway, Brgy. Sta. Cruz, Antipolo City",
+        "description": "Known for its 360-degree view deck offering stunning vistas of Metro Manila, especially at sunset. The complex includes a restaurant, hanging bridge, and art gallery.",
+        "cost": "PHP 50",
+        "image_url": "cloud-9.webp"
+      },
+      {
+        "name": "Luljetta's Hanging Gardens Spa",
+        "address": "Sitio Loreland, Brgy. San Roque, Antipolo City",
+        "description": "A serene spa retreat offering various relaxation amenities, including hydro-massage pools, saunas, and meditation lounges, all set against a backdrop of lush gardens and scenic views.",
+        "cost": "Packages start at PHP 1,150",
+        "image_url": "Luljettas-Hanging-Gardens-Spa.webp"
+      },
+      {
+        "name": "PACEM Eco Park",
+        "address": "Assumption Antipolo, Sumulong Highway, Antipolo City",
+        "description": "An ecological park aimed at promoting environmental awareness. It features a mini forest, wildlife sanctuary, aviary, organic garden, and a butterfly museum showcasing species from the Philippines and Asia.",
+        "cost": "PHP 100",
+        "image_url": "pacem-sanctuary.webp"
+      },
+      {
+        "name": "Mystical Cave",
+        "address": "Puting Bato, Brgy. San Jose, Antipolo City",
+        "description": "A cave known for its stalactites and stalagmites formations resembling religious figures. It has been a filming location for various local television series and movies.",
+        "cost": "PHP 40",
+        "image_url": "mystical-cave.webp"
+      },
+      {
+        "name": "Casa Santa Museum",
+        "address": "276 San Jose Ext., Brgy. San Isidro, Antipolo City",
+        "description": "A museum housing an extensive collection of Santa Claus figurines and Christmas-related items from around the world, making it a festive destination year-round.",
+        "cost": "PHP 180",
+        "image_url": "casa-santa.webp"
+      },
+      {
+        "name": "Mount Purro Nature Reserve",
+        "address": "Purok 5, Brgy. Calawis, Antipolo City",
+        "description": "An eco-park offering activities such as hiking, bird watching, and river trekking. It emphasizes environmental conservation and community development.",
+        "cost": "Day tour packages start at PHP 650",
+        "image_url": "mount-purro-nature-reserve.webp"
+      }
+    ]
+  }
+  

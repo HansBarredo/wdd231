@@ -1,0 +1,74 @@
+:root {
+    /* CSS HEX */
+    --Medium-sea-green: #18AF78;
+    --Bright-yellow: #F9D80D;
+    --Beige-light-ivory: #F6F3E2;
+
+    --quicksand-font: 'Quicksand', sans-serif;
+
+    --source-code-pro-font: "Source Code Pro", sans-serif;;
+
+
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: grid;
+    place-items: center;
+
+}
+
+h1, h2 {
+    font-family: var(--bebas-neue-font-family) ;
+    color: var(--Medium-sea-green);
+}
+
+p {
+    color: black;
+}
+
+
+.titleEx,
+.paragraphEx {
+    font-family: var(--quicksand-font);
+    color: var(--Medium-sea-green);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.bodyTextEx {
+    font-family: var(--source-code-pro-font);
+    color: black;
+    font-size: 18px;
+    font-weight: medium;
+}
+
+
+.bodyEx  p {
+    width: 200px;
+    height: 30px;
+    background-color: var(--Off-White);
+    color: black;
+    text-align: center;
+}
+
+.headerEx  h1 {
+    width: 200px;
+    height: 30px;
+    font-weight: 700;
+    background-color: var(--Beige-light-ivory);
+    color: var(--Medium-sea-green);
+    text-align: center;
+}
+
+.footerEx  p {
+    width: 200px;
+    height: 30px;
+    background-color: var(--Medium-sea-green);
+    color: black;
+    text-align: center;
+}
+
+img {
+    width: 25%;
+}
