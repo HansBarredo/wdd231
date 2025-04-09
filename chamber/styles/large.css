@@ -29,7 +29,7 @@
 
     #text-logo{
         display: flex;
-        max-width: 300px;
+        width: 300px;
         color: var(--secondary-color);
         margin-left: 0.5rem;
         margin-right: 2rem;
@@ -38,6 +38,7 @@
         text-align: left;
         font-family: "Cinzel", serif;
         justify-content: start;
+
     }
     
     header > a{
@@ -424,5 +425,78 @@
     width: 50%;
   
 }
+/* Discover Page */
+
+.discover-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.place-card {
+    display: grid;
+    grid-template-areas:
+    "name name" 
+    "image description"
+    "image address"
+    "image cost" 
+    "button button" ;
+    width: 700px;
+    min-height: 450px;
+    flex-direction: column;
+    justify-self: center;
+    gap: 1rem;
+    background-color: var(--primary-color);
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+  
+  .place-card img {
+    object-fit: fill;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 250px;
+    grid-row: span 3;
+  }
+  
+  #place-name{
+    grid-area: name;
+    font-size: 32px;
+  
+  }
+  
+  #place-address{
+    grid-area: address;
+    font-style: italic;
+  }
+
+  #place-image {
+    grid-area: image;
+  }
+  
+  .place-card #place-description {
+    grid-area: description;
+
+  }
+  
+  #place-cost {
+    grid-area: cost;
+  }
+
+  .openButton{
+    grid-area: button;
+    width: 100%;
+    justify-self: center
+  }
+
+  #place-description,
+  #place-address,
+  #place-cost {
+      align-self: start;
+  }
 
 }

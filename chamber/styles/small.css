@@ -43,7 +43,7 @@ header {
 }
 
 #text-logo {
-  min-width: 50%;
+  width: 200px;
   color: var(--secondary-color);
   margin-left: 0.5rem;
   margin-right: 2rem;
@@ -785,4 +785,21 @@ dialog h3{
 #place-address{
   grid-area: address;
   font-style: italic;
+
+  #place-image {
+    grid-area: image;
+  }
+  
+  #place-description {
+    grid-area: description;
+    height: 200px;
+  }
+  
+  #place-cost {
+    grid-area: cost;
+  }
+
+  .open-button{
+    grid-area: button;
+  }
 }
