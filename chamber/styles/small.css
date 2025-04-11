@@ -53,7 +53,7 @@ header {
   font-family: "Cinzel", serif;
 }
 
-header > a {
+header>a {
   width: 15%;
   display: flex;
   text-decoration: none;
@@ -147,7 +147,7 @@ li .active {
   gap: 1rem;
 }
 
-main{
+main {
   min-height: 100vh;
 }
 
@@ -320,7 +320,7 @@ footer p {
   width: 100%;
 }
 
-.image-container > img {
+.image-container>img {
   width: 100vw;
   height: 300px;
   object-fit: cover;
@@ -388,10 +388,11 @@ footer p {
   position: relative;
 }
 
-#prev{
+#prev {
   display: none;
 }
-#next{
+
+#next {
   display: none;
 }
 
@@ -419,16 +420,16 @@ footer p {
   background-color: var(--primary-color);
 }
 
-.events-cards img{
+.events-cards img {
   width: 150px;
   height: auto;
 }
 
-.events-cards p{
+.events-cards p {
   font-size: medium;
 }
 
-.events-cards h4{
+.events-cards h4 {
   margin: 1rem 0;
 }
 
@@ -461,14 +462,15 @@ figcaption {
   gap: 10px 50px;
 }
 
-.info-list > :first-child {
+.info-list> :first-child {
   grid-column: 1/3;
   margin-bottom: 1rem;
   text-align: center;
   font-size: x-large;
   color: var(--secondary-color);
 }
-figure img{
+
+figure img {
   display: flex;
   justify-self: center;
   width: 100px;
@@ -484,7 +486,7 @@ figure img{
   padding: 1rem;
 }
 
-#weather-forecast > * {
+#weather-forecast>* {
   padding: 2rem 1rem;
 }
 
@@ -493,7 +495,7 @@ figure img{
   text-align: center;
 }
 
-#weather-forecast .info-list-forecast{
+#weather-forecast .info-list-forecast {
   margin-left: 1rem;
 }
 
@@ -560,11 +562,11 @@ figure img{
 
 /* Join Page */
 
-#join-header{
+#join-header {
   font-size: x-large;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -574,23 +576,23 @@ form{
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.form-control input{
+.form-control input {
   height: 42px;
   padding: 0.5rem;
 }
 
-.form-control{
+.form-control {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
 
-.form-control:last-of-type{
+.form-control:last-of-type {
   background-color: aqua;
-  margin-bottom:0;
+  margin-bottom: 0;
 }
 
-input{
+input {
   border-style: groove;
 }
 
@@ -600,26 +602,26 @@ label {
   color: var(--secondary-color);
 }
 
-select{
+select {
   height: 42px;
 }
 
-.membership-selection{
+.membership-selection {
   display: flex;
   flex-direction: column;
 }
 
-.business-description{
+.business-description {
   display: flex;
   flex-direction: column;
 }
 
-.business-description textarea{
+.business-description textarea {
   height: 200px;
   padding: 0.5rem;
 }
 
-#submit{
+#submit {
   margin: 1rem 0;
   height: 42px;
   background-color: var(--accent-color);
@@ -627,36 +629,36 @@ select{
   font-weight: 600;
 }
 
-.incorrect{
+.incorrect {
   border-style: groove;
   border: 3px solid rgb(255, 44, 44);
 
 }
 
-.valid{
+.valid {
   border-style: groove;
   border: 3px solid rgb(44, 255, 72);
 
 }
 
-#memebrship-container h2{
+#memebrship-container h2 {
   background-color: var(--primary-color);
-  padding:1rem;
+  padding: 1rem;
   font-size: x-large;
 }
 
-#cards-container{
+#cards-container {
   padding: 1rem;
 }
 
-.membership-card{
+.membership-card {
   background-color: var(--primary-color);
   margin: 1rem 0;
   padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.openButton{
+.openButton {
   margin-top: 1rem;
   width: auto;
   height: 50px;
@@ -664,7 +666,7 @@ select{
   justify-self: center;
 }
 
-dialog{
+dialog {
   justify-self: center;
   align-self: center;
   height: auto;
@@ -672,17 +674,17 @@ dialog{
   padding: 2rem;
 }
 
-.closeButton{
+.closeButton {
   margin-top: 1rem;
 }
 
-dialog h3{
+dialog h3 {
   margin-bottom: 1rem;
 }
 
 /* Summary Page */
 
-#summary-container{
+#summary-container {
   display: flex;
   flex-direction: column;
   justify-self: center;
@@ -691,8 +693,8 @@ dialog h3{
   flex-grow: 1;
 }
 
-#summary{
-  display:flex ;
+#summary {
+  display: flex;
   flex-direction: column;
   background-color: var(--primary-color);
   text-align: left;
@@ -700,34 +702,36 @@ dialog h3{
   justify-content: center;
   gap: 0.5rem;
 }
-#summary> p:last-child{
+
+#summary>p:last-child {
   margin-top: 2rem;
 }
 
-#summary-container a{
+#summary-container a {
   color: var(--accent-color);
   background-color: var(--primary-color);
   padding-bottom: 2rem;
 }
 
-#memebrship-container .membership-card{
+#memebrship-container .membership-card {
   opacity: 0;
-          transform: scale(0);
-          animation: fadeInScale 0.8s ease-out forwards;
+  transform: scale(0);
+  animation: fadeInScale 0.8s ease-out forwards;
 }
 
 @keyframes fadeInScale {
   from {
-      opacity: 0;
-      transform: scale(0.8);
+    opacity: 0;
+    transform: scale(0.8);
   }
+
   to {
-      opacity: 1;
-      transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
-.timestamp-container{
+.timestamp-container {
   display: none;
 }
 
@@ -750,11 +754,11 @@ dialog h3{
 .place-card {
   display: grid;
   grid-template-areas:
-  "name"
-  "image"
-  "description"
-  "address"
-  "cost" ;
+    "name"
+    "image"
+    "description"
+    "address"
+    "cost";
   width: 350px;
   min-height: 450px;
   flex-direction: column;
@@ -777,29 +781,29 @@ dialog h3{
   height: 200px;
 }
 
-#place-name{
+#place-name {
   grid-area: name;
 
 }
 
-#place-address{
+#place-address {
   grid-area: address;
   font-style: italic;
+}
 
-  #place-image {
-    grid-area: image;
-  }
-  
-  #place-description {
-    grid-area: description;
-    height: 200px;
-  }
-  
-  #place-cost {
-    grid-area: cost;
-  }
+#place-image {
+  grid-area: image;
+}
 
-  .open-button{
-    grid-area: button;
-  }
+#place-description {
+  grid-area: description;
+  height: 200px;
+}
+
+#place-cost {
+  grid-area: cost;
+}
+
+.open-button {
+  grid-area: button;
 }

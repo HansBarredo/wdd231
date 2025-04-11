@@ -1,0 +1,23 @@
+{
+    "articles": [
+      {
+        "title": "Breaking the Stigma: Why Talking About Mental Health Matters",
+        "author": "Maria Gonzales",
+        "date_posted": "April 1, 2025",
+        "preview_description": "In a society where mental health is often swept under the rug, open conversations can be life-saving. This article explores how breaking the stigma can empower individuals to seek help and build more supportive communities."
+      },
+      {
+        "title": "Self-Care Isn't Selfish: Building Your Mental Health Routine",
+        "author": "James Cruz",
+        "date_posted": "April 3, 2025",
+        "preview_description": "Taking care of your mental well-being should be a priority, not a luxury. Learn practical self-care tips you can incorporate into your daily life to boost resilience and emotional balance."
+      },
+      {
+        "title": "How to Support a Friend With Depression",
+        "author": "Angela Reyes",
+        "date_posted": "April 5, 2025",
+        "preview_description": "Supporting a loved one with depression can feel overwhelming, but your presence can make a huge difference. This article offers actionable advice on how to be there for someone in a meaningful and healthy way."
+      }
+    ]
+  }
+  
