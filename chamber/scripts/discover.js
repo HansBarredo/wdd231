@@ -51,7 +51,7 @@ function displayPlacesCards(places) {
         placeCard.classList.add('place-card');
         
         placeCard.innerHTML = `
-            <img src="images/${place.image_url}" alt="${place.name} logo" class="place-image">
+            <img loading="lazy" src="images/${place.image_url}" alt="${place.name} logo" class="place-image">
             <h3 id="place-name">${place.name}</h3>
             <p id="place-address">${place.address}</p>
             <p id="place-description">${place.description || 'N/A'}</p>
