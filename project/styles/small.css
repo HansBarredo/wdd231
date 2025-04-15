@@ -73,14 +73,6 @@ header>a {
 }
 
 
-/* #light-dark::before{
-          display: none;
-          content: "☀️";
-          font-size: 42px;
-          margin-left: 1.5rem;
-          text-align: center;
-      } */
-
 #menu {
   margin-left: auto;
 }
@@ -606,7 +598,6 @@ svg.hide #middle-line {
   width: 345px;
 }
 
-/* join */
 
 #form-container{
   background-color: var(--accent-color2);
@@ -785,7 +776,6 @@ dialog h3 {
   }
 }
 
-/* Summary Page */
 
 #summary-container {
   display: flex;
@@ -826,8 +816,6 @@ dialog h3 {
 }
 
 
-
-/* About Us */
 
 #header-about {
   color: var(--Medium-sea-green);

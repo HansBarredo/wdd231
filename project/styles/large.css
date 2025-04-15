@@ -36,16 +36,6 @@ header > a{
     justify-content: center;
 }
 
-#light-dark{
-    margin-left: auto;
-}
-
-#light-dark::before{
-    content: "☀️";
-    font-size: 2rem;
-    text-align: right;
-}
-
 #menu.hide::before{
     display: none;
     content: "≡";
@@ -232,6 +222,10 @@ svg{
 
 #news{
     padding: 2rem 10rem;
+}
+
+#news h2{
+    margin-bottom: 2rem;
 }
 
 .subscribe {
