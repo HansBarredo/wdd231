@@ -1,4 +1,4 @@
-import { initNavigation } from './navToggle.js';
+import { initNavigation } from './nav.js';
 
 initNavigation();
 
