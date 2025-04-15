@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Hans Barredo">
-    <meta name="description" content="The Official Chamber of Commerce website of the City of Antipolo">
+    <meta name="description" content="The Official website of MentalHealthPH">
 
-    <meta property="og:title" content="Antipolo Chamber of Commerce">
+    <meta property="og:title" content="MentalHealthPH">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://hansbarredo.github.io/wdd231/chamber/images/Hinulugang-Taktak.webp">
     <meta property="og:url" content="https://hansbarredo.github.io/wdd231/chamber/directory.html">
@@ -16,11 +16,10 @@
 
     <link rel="preload" href="styles/normalize.css" as="style">
     <link rel="preload" href="styles/small.css" as="style">
-    <!-- <link rel="preload" href="styles/large.css" as="style"> -->
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
-    <!-- <link rel="stylesheet" href="styles/large.css"> -->
+    <link rel="stylesheet" href="styles/large.css">
 
     <title>Get Support for you Mental Health!- MentalHealthPH</title>
 </head>
@@ -39,9 +38,9 @@
         <nav id="navigation" class="hide">
             <ul id="nav-list" class="hide">
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Discover</a></li>
-                <li><a href="https://hansbarredo.github.io/wdd231/chamber/directory.html">Business Directory</a></li>
-                <li><a href="#">Join</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="https://hansbarredo.github.io/wdd231/chamber/directory.html">Volunteer</a></li>
+                <li><a id="donate-tab" href="#">Donate</a></li>
             </ul>
         </nav>
     </header>
@@ -53,25 +52,28 @@
     </section>
     <main>
         <section id="counter-container">
-            <h1>You deserve a mentally healthier <strong>Philippines</strong>.</h1>
+            <h1>You deserve a mentally healthier <strong>Philippines.</strong></h1>
             <p>We dream of building a future where your mental health doesn’t get in the way of achieving your dreams and thriving within your communities. We do this by spreading awareness to end the stigma, empowering you to support yourself or others, and collaborating across sectors for solutions that last.</p>
             <p>We believe this—and so do the people and partners we’ve helped and worked with along the way!</p>
-            <div class="counter">
-                <h2><span data-count='100000'>0+</span></h2>
-                <h3>Social Media Follower</h3>
+            <div id="counters">
+                <div class="counter">
+                    <h2><span data-count='100000'>0+</span></h2>
+                    <h3>Social Media Follower</h3>
+                </div>
+                <div class="counter">
+                    <h2><span data-count='30'>0+</span></h2>
+                    <h3>Activities and Campaigns</h3>
+                </div>
+                <div class="counter">
+                    <h2><span data-count='14'>0</span></h2>
+                    <h3>Global Partners</h3>
+                </div>
+                <div class="counter">
+                    <h2><span data-count='4'>0</span></h2>
+                    <h3>Chapters Nationwide</h3>
+                </div>
             </div>
-            <div class="counter">
-                <h2><span data-count='30'>0+</span></h2>
-                <h3>Activities and Campaigns</h3>
-            </div>
-            <div class="counter">
-                <h2><span data-count='14'>0</span></h2>
-                <h3>Global Partners</h3>
-            </div>
-            <div class="counter">
-                <h2><span data-count='4'>0</span></h2>
-                <h3>Chapters Nationwide</h3>
-            </div>
+            
         </section>
         <section id="offers-container">
             <h2>What We Do</h2>
@@ -100,12 +102,45 @@
         <section id="news">
             <h2>News</h2>
             <div class="articles-container">
-                
             </div>
             <a>See All</a>
         </section>
+        <div class="donate">
+            <h2 class="donate__title">Support the Community!</h2>
+            <p class="donate__copy">#MentalHealthPH is a private, non-stock, and non-profit organization, donations and any kind of support would  go a long way to help us run our campaigns!</p>
+            <a>Make a Donation</a>
+        </div>
+        <div class="subscribe">
+            <h2 class="subscribe__title">Let's keep in touch</h2>
+            <p class="subscribe__copy">Subscribe to keep up with fresh news and exciting updates. We promise not to spam you!</p>
+            <div class="form">
+                <input type="email" class="form__email" placeholder="Enter your email address" />
+                <button class="form__button">Subscribe</button>
+            </div>
+            <div class="notice">
+                <input type="checkbox">
+                <span class="notice__copy">I agree to my email address being stored and uses to recieve monthly newsletter.</span>
+            </div>
+        </div>
     </main>
-
+    <footer>
+        <div class="footer-container">
+            <h3>MentalHealthPH</h3>
+            <p>2nd Floor, Hillside Plaza Building, 23, Sumulong Highway, Barangay Mayamot, Antipolo, 1870</p>
+            <a href="tel:+63286471818">(02) 8647 1818</a>
+        </div>
+        <div class="icons">
+            <a href="https://facebook.com"><img src="images/facebook.webp" alt="Facebook logo" width="36"
+                    height="36"></a>
+            <a href="https://instagram.com"><img src="images/social.webp" alt="Instagram logo" width="36"
+                    height="36"></a>
+            <a href="https://x.com"><img src="images/twitter.webp" alt="x logo" width="36" height="36"></a>
+        </div>
+        <div class="copy-container">
+            <p>&copy; <span id="copyright-year"></span> | Hans Barredo | Philippines</p>
+            <span id="modified"></span>
+        </div>
+    </footer>
 
     <script src="scripts/index.js"></script>
 </body>

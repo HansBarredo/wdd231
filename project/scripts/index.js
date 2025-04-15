@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   navList.classList.add("hide");
 });
 
+
 hambutton.addEventListener('click', () => {
   const isShown = mainnav.classList.contains('show');
 
@@ -22,7 +23,7 @@ hambutton.addEventListener('click', () => {
     hambutton.classList.add('show');
     navList.classList.remove('hide');
     setTimeout(() => {
-      navList.classList.add = 'none'; // NOTE: This line looks broken, probably meant to addClass or change something else
+      navList.classList.add = ('none'); // NOTE: This line looks broken, probably meant to addClass or change something else
     }, 3000);
   }
 });
@@ -56,7 +57,11 @@ function displayArticlesCards(articles) {
   const container = document.querySelector('.articles-container');
   container.innerHTML = '';
 
-  articles.forEach(article => {
+  const shuffledArticles = articles.sort(() => 0.5 - Math.random());
+
+  const selectedArticles = shuffledArticles.slice(0, 4);
+
+  selectedArticles.forEach(article => {
     const articleCard = document.createElement('div');
     articleCard.classList.add('article-card');
 
@@ -71,7 +76,11 @@ function displayArticlesCards(articles) {
 
     container.appendChild(articleCard);
   });
+
+  
 }
+
+
 
 const counters = document.querySelectorAll('#counter-container span');
 const container = document.querySelector('#counter-container');
@@ -86,7 +95,7 @@ window.addEventListener("scroll", () => {
       counter.innerText = "0";
       let count = 0;
       const target = parseInt(counter.dataset.count);
-      const duration = 2000;
+      const duration = 5000;
       const increment = Math.ceil(target / (duration / 16));
       const addPlus = target === 100000 || target === 30; 
 
@@ -106,3 +115,9 @@ window.addEventListener("scroll", () => {
     activated = true;
   }
 });
+
+let oLastModif = new Date(document.lastModified);
+
+modified.innerHTML = `Last Modification: <span class="last-mod">${oLastModif.toLocaleString()}</span>`;
+
+document.getElementById('copyright-year').textContent = new Date().getFullYear();

@@ -22,7 +22,7 @@ hambutton.addEventListener('click', () => {
     hambutton.classList.add('show');
     navList.classList.remove('hide');
     setTimeout(() => {
-      navList.classList.add = 'none'; // NOTE: This line looks broken, probably meant to addClass or change something else
+      navList.classList.add = ('none'); 
     }, 3000);
   }
 });
@@ -71,7 +71,7 @@ function displayMembershipCards(memberships) {
 
     memberships.forEach(membership => {
         const card = document.createElement('div');
-        card.classList.add('membership-card'); 
+        card.classList.add('campaign-card'); 
         card.innerHTML = `
             <h3>${membership.campaign}</h3>
             <button class="openButton"> More Information</button>
@@ -106,61 +106,13 @@ document.addEventListener("DOMContentLoaded", function () {
 const form = document.getElementById("form");
 const fname_input = document.getElementById("fname");
 const lname_input = document.getElementById("lname");
-const orgTitle_input = document.getElementById("organization-title");
+const orgTitle_input = document.getElementById("employment");
 const email_input = document.getElementById("email");
 const contact_input = document.getElementById("tel");
-const orgName_input = document.getElementById("organization");
-const membership_input = document.getElementById("membership-level");
-const orgDescription_input = document.getElementById("organization-description");
+const campaign_input = document.getElementById("campaign-level");
 
-const OrgTitleRegEx = /^[A-Za-z\- ]{7,}$/;
+const EmpRegEx = /^[A-Za-z\- ]{7,}$/;
 const phoneRegex = /^\+?\d{1,4}?[-.\s]?\(?\d{1,4}?\)?[-.\s]?\d{1,9}[-.\s]?\d{1,9}[-.\s]?\d{1,9}$/;
-
-form.addEventListener('submit', (e) => {
-    let errors = getSignupFormErrors();
-
-    console.log(errors);
-
-    if (errors.length > 0) {
-        e.preventDefault();
-    }
-});
-
-function getSignupFormErrors() {
-    let errors = [];
-
-    if (fname_input.value.trim() === '') {
-        errors.push('First name is required');
-        fname_input.classList.add('incorrect');
-    }
-
-    if (lname_input.value.trim() === '') {
-        errors.push('Last name is required');
-        lname_input.classList.add('incorrect');
-    }
-
-    if (orgTitle_input.value.trim() === '' || !OrgTitleRegEx.test(orgTitle_input.value.trim())) {
-        errors.push('Organization title is required');
-        orgTitle_input.classList.add('incorrect');
-    }
-
-    if (email_input.value.trim() === '') {
-        errors.push('Email is required');
-        email_input.classList.add('incorrect');
-    }
-
-    if (contact_input.value.trim() === '' || !phoneRegex.test(contact_input.value.trim())) {
-        errors.push('Contact number is required');
-        contact_input.classList.add('incorrect');
-    }
-
-    if (membership_input.value.trim() === '') {
-        errors.push('Membership level is required');
-        membership_input.classList.add('incorrect');
-    }
-
-    return errors;
-}
 
 function validateField(input, condition) {
     if (condition) {
@@ -172,27 +124,89 @@ function validateField(input, condition) {
     }
 }
 
+// Real-time input validation
+fname_input.addEventListener("input", () =>
+    validateField(fname_input, fname_input.value.trim() !== "")
+);
+lname_input.addEventListener("input", () =>
+    validateField(lname_input, lname_input.value.trim() !== "")
+);
+orgTitle_input.addEventListener("input", () =>
+    validateField(orgTitle_input, OrgTitleRegEx.test(orgTitle_input.value.trim()))
+);
+email_input.addEventListener("input", () =>
+    validateField(email_input, email_input.value.trim() !== "")
+);
+contact_input.addEventListener("input", () =>
+    validateField(contact_input, phoneRegex.test(contact_input.value.trim()))
+);
+campaign_input.addEventListener("change", () =>
+    validateField(campaign_input, campaign_input.value !== "")
+);
 
-fname_input.addEventListener("input", () => validateField(fname_input, fname_input.value.trim() !== ""));
-lname_input.addEventListener("input", () => validateField(lname_input, lname_input.value.trim() !== ""));
-orgTitle_input.addEventListener("input", () => validateField(orgTitle_input, OrgTitleRegEx.test(orgTitle_input.value.trim())));
-email_input.addEventListener("input", () => validateField(email_input, email_input.value.trim() !== ""));
-contact_input.addEventListener("input", () => validateField(contact_input, phoneRegex.test(contact_input.value.trim())));
-orgName_input.addEventListener("input", () => validateField(orgName_input, orgName_input.value.trim() !== ""));
-membership_input.addEventListener("change", () => validateField(membership_input, membership_input.value !== ""));
-orgDescription_input.addEventListener("input", () => validateField(orgDescription_input, orgDescription_input.value.trim() !== ""));
+// Validation function
+function getSignupFormErrors() {
+    let errors = [];
 
-document.getElementById("form").addEventListener("submit", function (event) {
-    event.preventDefault(); 
+    const inputs = [
+        fname_input,
+        lname_input,
+        orgTitle_input,
+        email_input,
+        contact_input,
+        campaign_input
+    ];
+    inputs.forEach(input => input.classList.remove('incorrect'));
+
+    if (fname_input.value.trim() === '') {
+        errors.push('First name is required');
+        fname_input.classList.add('incorrect');
+    }
+
+    if (lname_input.value.trim() === '') {
+        errors.push('Last name is required');
+        lname_input.classList.add('incorrect');
+    }
+
+    if (orgTitle_input.value.trim() === '' || !EmpRegEx.test(orgTitle_input.value.trim())) {
+        errors.push('Employment title must be at least 7 characters long and only contain letters, hyphens, or spaces');
+        orgTitle_input.classList.add('incorrect');
+    }
+
+    if (email_input.value.trim() === '') {
+        errors.push('Email is required');
+        email_input.classList.add('incorrect');
+    }
+
+    if (contact_input.value.trim() === '' || !phoneRegex.test(contact_input.value.trim())) {
+        errors.push('Valid contact number is required');
+        contact_input.classList.add('incorrect');
+    }
+
+    if (campaign_input.value === '') {
+        errors.push('Campaign selection is required');
+        campaign_input.classList.add('incorrect');
+    }
+
+    return errors;
+}
+
+// Only one submit handler
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
     let errors = getSignupFormErrors();
-    
+
     if (errors.length === 0) {
         const formData = new FormData(this);
         const queryString = new URLSearchParams(formData).toString();
         window.location.href = `thankyou.html?${queryString}`;
+    } else {
+        console.log(errors); // Show errors in console for debugging
     }
 });
+
+
 
 let oLastModif = new Date(document.lastModified);
 

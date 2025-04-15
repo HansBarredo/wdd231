@@ -21,8 +21,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
 
-
-    <title>Join | MentalHealthPH</title>
+    <title>Thank you | MentalHealthPH</title>
 </head>
 
 <body>
@@ -46,60 +45,37 @@
         </nav>
     </header>
     <main>
-        <div id="join-container">
-            <section id="form-container">
-                <h1 id="join-header">Volunteer Application</h1>
-                <form id="form" action="thankyou.html" method="GET">
-                    <div class="form-control">
-                        <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="fname" autocomplete="given-name" placeholder="First Name">
+        <div id="summary-container">
+            <div id="summary">
+                <div class="donation-container">
+                    <h2>Donate via BDO</h2>
+                    <div class="donation-box">
+                      <img src="images/bdo-logo.png" alt="BDO Logo" height="75px" width="75px">
+                      <div class="donation-details">
+                        <strong>Bank:</strong> BDO Unibank, Inc.<br>
+                        <strong>Account Name:</strong> Mental Health PH Foundation<br>
+                        <strong>Account Number:</strong> 0000 1234 5678
+                      </div>
                     </div>
-                    <div class="form-control">
-                        <label for="lname">Last Name</label>
-                        <input type="text" id="lname" name="lname" autocomplete="family-name" placeholder="Last Name">
-                    </div>
-                    <div class="form-control">
-                        <label for="employment">Employment</label>
-                        <input type="text" id="employment" name="employment"
-                            autocomplete="employment" placeholder="Ex. President">
-                    </div>
-                    <div class="form-control">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" autocomplete="email"
-                            placeholder="JaneDoe@example.com">
-                    </div>
-                    <div class="form-control">
-                        <label for="tel">Contact Number</label>
-                        <input type="tel" id="tel" name="tel" autocomplete="tel" placeholder="+XXXX-XXXX-XXXX">
-                    </div>
-                    <div class="campaign-selection">
-                        <label for="campaign-level">Campaign Selection</label>
-                        <select id="campaign-level" name="campaign-level">
-                            <option value="" disabled selected>Select a campaign...</option>
-                            <option value="np">Online</option>
-                            <option value="bronze">On Ground</option>
-                            <option value="silver">Onward</option>
-                        </select>
+                
+                    <h2>Donate via GCash</h2>
+                    <div class="donation-box">
+                      <img src="images/gcash-logo.png" alt="GCash Logo" height="75px" width="75px">
+                      <div class="donation-details">
+                        <strong>GCash Name:</strong> Mental Health PH<br>
+                        <strong>GCash Number:</strong> 0917 123 4567
+                      </div>
                     </div>
                     <br>
-                    <input id="submit" type="submit" value="Submit Application">
-                    <div class="timestamp-container">
-                        <input type="hidden" id="timestamp" name="timestamp">
-                    </div>                    
-                </form>
-            </section>
-            <section id="campaign-container">
-                <h2>Campaign Types</h2>
-                <div id="cards-container">
-
-                </div>
-            </section>
-
+                    <p>Thank you for supporting mental wellness initiatives in the Philippines!</p>
+                  </div>
+                  <dialog id="visit-message" class="visit-message"></dialog>
+            </div>
         </div>
     </main>
     <footer>
         <div class="footer-container">
-            <h3>MentalHealthPH</h3>
+            <h3>Antipolo Chamber of Commerce</h3>
             <p>2nd Floor, Hillside Plaza Building, 23, Sumulong Highway, Barangay Mayamot, Antipolo, 1870</p>
             <a href="tel:+63286471818">(02) 8647 1818</a>
         </div>
@@ -115,7 +91,7 @@
             <span id="modified"></span>
         </div>
     </footer>
-   <script src="scripts/join.js" defer></script>
+    <script src="scripts/donate.js"  defer></script>
 </body>
 
 </html>

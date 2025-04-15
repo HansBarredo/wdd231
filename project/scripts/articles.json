@@ -1,23 +1,94 @@
 {
-    "articles": [
-      {
-        "title": "Breaking the Stigma: Why Talking About Mental Health Matters",
-        "author": "Maria Gonzales",
-        "date_posted": "April 1, 2025",
-        "preview_description": "In a society where mental health is often swept under the rug, open conversations can be life-saving. This article explores how breaking the stigma can empower individuals to seek help and build more supportive communities."
-      },
-      {
-        "title": "Self-Care Isn't Selfish: Building Your Mental Health Routine",
-        "author": "James Cruz",
-        "date_posted": "April 3, 2025",
-        "preview_description": "Taking care of your mental well-being should be a priority, not a luxury. Learn practical self-care tips you can incorporate into your daily life to boost resilience and emotional balance."
-      },
-      {
-        "title": "How to Support a Friend With Depression",
-        "author": "Angela Reyes",
-        "date_posted": "April 5, 2025",
-        "preview_description": "Supporting a loved one with depression can feel overwhelming, but your presence can make a huge difference. This article offers actionable advice on how to be there for someone in a meaningful and healthy way."
-      }
-    ]
-  }
-  
+  "articles": [
+    {
+      "title": "Breaking the Stigma: Why Talking About Mental Health Matters",
+      "author": "Maria Gonzales",
+      "date_posted": "April 1, 2025",
+      "preview_description": "In a society where mental health is often swept under the rug, open conversations can be life-saving. This article explores how breaking the stigma can empower individuals to seek help and build more supportive communities."
+    },
+    {
+      "title": "Self-Care Isn't Selfish: Building Your Mental Health Routine",
+      "author": "James Cruz",
+      "date_posted": "April 3, 2025",
+      "preview_description": "Taking care of your mental well-being should be a priority, not a luxury. Learn practical self-care tips you can incorporate into your daily life to boost resilience and emotional balance."
+    },
+    {
+      "title": "How to Support a Friend With Depression",
+      "author": "Angela Reyes",
+      "date_posted": "April 5, 2025",
+      "preview_description": "Supporting a loved one with depression can feel overwhelming, but your presence can make a huge difference. This article offers actionable advice on how to be there for someone in a meaningful and healthy way."
+    },
+    {
+      "title": "Mindfulness for Beginners: Start Your Journey Today",
+      "author": "Liam De Leon",
+      "date_posted": "April 7, 2025",
+      "preview_description": "Mindfulness can improve your quality of life and reduce stress. Discover easy ways to start practicing mindfulness every day, even if you’ve never meditated before."
+    },
+    {
+      "title": "Understanding Anxiety: What It Is and How to Cope",
+      "author": "Ella Mendoza",
+      "date_posted": "April 9, 2025",
+      "preview_description": "Anxiety is more than just worry. Learn the symptoms, causes, and strategies to manage anxiety effectively in daily life."
+    },
+    {
+      "title": "The Power of Journaling: Healing Through Words",
+      "author": "Miguel Santos",
+      "date_posted": "April 10, 2025",
+      "preview_description": "Writing in a journal is a powerful tool for reflection and growth. Discover how journaling can improve your mental and emotional health."
+    },
+    {
+      "title": "Digital Detox: Reclaiming Your Mental Space",
+      "author": "Karla Buenaventura",
+      "date_posted": "April 12, 2025",
+      "preview_description": "Constant screen time can drain you mentally. Learn how to take a step back and reset with a digital detox strategy that works."
+    },
+    {
+      "title": "Creating a Safe Space: How to Talk Openly About Mental Health at Home",
+      "author": "John Paul Reyes",
+      "date_posted": "April 14, 2025",
+      "preview_description": "Mental health conversations should start at home. This article shares tips on how to create a safe, open, and understanding environment for your family."
+    },
+    {
+      "title": "Burnout at Work: Signs, Causes, and Recovery Tips",
+      "author": "Rica Villanueva",
+      "date_posted": "April 15, 2025",
+      "preview_description": "Work burnout is real and it affects your productivity and health. Learn how to spot the signs early and take action to recover."
+    },
+    {
+      "title": "The Role of Nutrition in Mental Health",
+      "author": "Dino Herrera",
+      "date_posted": "April 16, 2025",
+      "preview_description": "What you eat affects your mood. Understand the connection between food and mental wellness and discover what to include in your diet."
+    },
+    {
+      "title": "Meditation for Stress Relief: A Step-by-Step Guide",
+      "author": "Patricia Cruz",
+      "date_posted": "April 18, 2025",
+      "preview_description": "Overwhelmed? Try this easy step-by-step meditation technique to calm your mind and bring peace into your daily routine."
+    },
+    {
+      "title": "How Nature Helps Heal the Mind",
+      "author": "Luis Garcia",
+      "date_posted": "April 20, 2025",
+      "preview_description": "Nature has a profound impact on mental well-being. Learn how to incorporate nature walks, greenery, and fresh air into your healing journey."
+    },
+    {
+      "title": "Sleep and Mental Health: Why It Matters More Than You Think",
+      "author": "Nicole Tan",
+      "date_posted": "April 22, 2025",
+      "preview_description": "Sleep is critical for your brain and emotions. Find out how better sleep habits can drastically improve your mental health."
+    },
+    {
+      "title": "Overcoming Negative Self-Talk: Tools for Confidence",
+      "author": "Marco Antonio",
+      "date_posted": "April 24, 2025",
+      "preview_description": "Silencing your inner critic is possible. Explore tools and strategies to build self-esteem and shift your inner dialogue."
+    },
+    {
+      "title": "How Art Therapy Can Help You Heal",
+      "author": "Faith Dimaculangan",
+      "date_posted": "April 26, 2025",
+      "preview_description": "Creativity is more than expression—it’s a path to healing. Learn how art therapy works and how you can try it at home."
+    }
+  ]
+}
