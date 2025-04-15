@@ -85,6 +85,10 @@ header>a {
   margin-left: auto;
 }
 
+#hamburger-wrapper{
+  margin-left: auto;
+}
+
 svg {
   margin-left: auto;
   width: 50px;
