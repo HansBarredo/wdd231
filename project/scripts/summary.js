@@ -15,7 +15,7 @@ document.querySelector("#summary").innerHTML = `
 <p><strong style="color:var(--secondary-color);">Contact:</strong> ${myInfo.get('tel')}</p>
 <p><strong style="color:var(--secondary-color);">Organization:</strong> ${organization}</p>
 <p><strong style="color:var(--secondary-color);">Time submitted:</strong> ${myInfo.get('timestamp')}</p>
-<p>Thank you, Mr./Ms. ${lastName}, for joining the Antipolo Chamber of Commerce. We are excited to have <strong>${organization}</strong> as part of our growing business community!</p>
+<p>Thank you, Mr./Ms. ${lastName}, for you desire to volunteer. We are excited to have you as part of our growing community!</p>
 `;
 
 let oLastModif = new Date(document.lastModified);
