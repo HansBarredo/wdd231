@@ -298,12 +298,24 @@ footer > a{
 
 #nav-list #donate-tab:hover{
     display: flex;
-    background-color:var(--Bright-yellow);
-    color: var(--Medium-sea-green);
+    background-color:var(--Medium-sea-green);
+    color: var(--Bright-yellow);
     width: 100px;
     justify-content: center;
     border-radius: 15px;
     box-shadow: none;
+    text-decoration: none;
+}
+
+#nav-list #donate-tab.active{
+    display: flex;
+    background-color:var(--Medium-sea-green);
+    color: var(--Bright-yellow);
+    width: 100px;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: none;
+    text-decoration: none;
 }
 
 }

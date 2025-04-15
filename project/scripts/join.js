@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   navList.classList.add("hide");
 });
 
+
 hambutton.addEventListener('click', () => {
   const isShown = mainnav.classList.contains('show');
 
@@ -22,7 +23,7 @@ hambutton.addEventListener('click', () => {
     hambutton.classList.add('show');
     navList.classList.remove('hide');
     setTimeout(() => {
-      navList.classList.add = ('none'); 
+      navList.classList.add('none'); 
     }, 3000);
   }
 });
@@ -124,7 +125,7 @@ function validateField(input, condition) {
     }
 }
 
-// Real-time input validation
+
 fname_input.addEventListener("input", () =>
     validateField(fname_input, fname_input.value.trim() !== "")
 );
@@ -144,7 +145,6 @@ campaign_input.addEventListener("change", () =>
     validateField(campaign_input, campaign_input.value !== "")
 );
 
-// Validation function
 function getSignupFormErrors() {
     let errors = [];
 
@@ -202,7 +202,7 @@ form.addEventListener("submit", function (event) {
         const queryString = new URLSearchParams(formData).toString();
         window.location.href = `thankyou.html?${queryString}`;
     } else {
-        console.log(errors); // Show errors in console for debugging
+        console.log(errors); 
     }
 });
 

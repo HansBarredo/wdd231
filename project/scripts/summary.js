@@ -23,8 +23,17 @@ hambutton.addEventListener('click', () => {
     hambutton.classList.add('show');
     navList.classList.remove('hide');
     setTimeout(() => {
-      navList.classList.add = ('none'); 
+      navList.classList.add('none'); 
     }, 3000);
+  }
+});
+
+document.addEventListener('click', e => {
+  if (!mainnav.contains(e.target) && e.target !== hambutton) {
+    mainnav.classList.remove('show');
+    hambutton.classList.remove('show');
+    hambutton.classList.add('hide');
+    navList.classList.add('hide');
   }
 });
 

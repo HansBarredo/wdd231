@@ -23,7 +23,7 @@ hambutton.addEventListener('click', () => {
     hambutton.classList.add('show');
     navList.classList.remove('hide');
     setTimeout(() => {
-      navList.classList.add = ('none'); // NOTE: This line looks broken, probably meant to addClass or change something else
+      navList.classList.add('none'); 
     }, 3000);
   }
 });
@@ -36,7 +36,6 @@ document.addEventListener('click', e => {
     navList.classList.add('hide');
   }
 });
-
 async function fetchArticles() {
   try {
     const response = await fetch('scripts/articles.json');

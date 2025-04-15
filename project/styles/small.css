@@ -269,7 +269,7 @@ svg.hide #middle-line {
   text-decoration:underline var(--Bright-yellow) 3px;
 }
 
-nav a.active {
+#nav-list li a.active {
   display: flex;
   text-decoration: underline var(--Bright-yellow) 3px;
   gap: 1rem;

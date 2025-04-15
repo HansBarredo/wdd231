@@ -12,7 +12,7 @@
     <meta property="og:image" content="https://hansbarredo.github.io/wdd231/chamber/images/Hinulugang-Taktak.webp">
     <meta property="og:url" content="https://hansbarredo.github.io/wdd231/chamber/directory.html">
 
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicon.webp">
 
     <link rel="preload" href="styles/normalize.css" as="style">
     <link rel="preload" href="styles/small.css" as="style">
@@ -26,15 +26,17 @@
 
 <body>
     <header>
-        <a id="logo" href="#"><img src="images/logo-new.png" alt="MentalHealthPH Logo"></a>
+        <a id="logo" href="#"><img loading="lazy" src="images/logo-new.webp" alt="MentalHealthPH Logo"></a>
         <!-- <a id="light-dark" class="hide" href="#"></a> -->
-        <svg id="hamburger" class="hide" viewbox="0 0 60 40">
-            <g stroke="#18AF78" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <div id="hamburger-wrapper">
+            <svg id="hamburger" viewBox="0 0 60 40">
+              <g stroke="#18AF78" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
                 <path id="top-line" d="M10,10 L50,10 Z"></path>
                 <path id="middle-line" d="M10,20 L50,20 Z"></path>
                 <path id="bottom-line" d="M10,30 L50,30 Z"></path>
-            </g>
-        </svg>
+              </g>
+            </svg>
+          </div>
         <nav id="navigation" class="hide">
             <ul id="nav-list" class="hide">
                 <li><a href="#" class="active">Home</a></li>
@@ -46,7 +48,7 @@
     </header>
     <section id="hero-container">
         <div class="image-container">
-            <img src="images/MentalHealth_FeaturedImage.jpg" alt="">
+            <img loading="lazy" src="images/MentalHealth_FeaturedImage.webp" alt="">
         </div>
         
     </section>
@@ -78,21 +80,21 @@
         <section id="offers-container">
             <h2>What We Do</h2>
             <div class="offers-cards">
-                <img src="images/UsapTayo-7-30-2020-1-768x768.jpg" alt="">
+                <img loading="lazy" src="images/UsapTayo-7-30-2020-1-768x768.webp" alt="">
                 <div class="card-content">
                     <h3> Online</h3>
                     <p>Inspiring stories, Twitter discussions, and videos</p>
                 </div>
             </div>
             <div class="offers-cards">
-                <img src="images/mentalhealthph-iloilo-festive-walk-mentalhealthph-org-1024x768.jpg" alt="">
+                <img loading="lazy" src="images/mentalhealthph-iloilo-festive-walk-mentalhealthph-org-1024x768.webp" alt="">
                 <div class="card-content">
                     <h3> On Ground</h3>
                     <p>Live events at workplaces, schools, and physical spaces</p>
                 </div>
             </div>
             <div class="offers-cards">
-                <img src="images/WHO-Meeting-3-1024x768.jpg" alt="">
+                <img loading="lazy" src="images/WHO-Meeting-3-1024x768.webp" alt="">
                 <div class="card-content">
                     <h3> Onward</h3>
                     <p>Partnerships, networking, and collaboration</p>
@@ -130,11 +132,11 @@
             <a href="tel:+63286471818">(02) 8647 1818</a>
         </div>
         <div class="icons">
-            <a href="https://facebook.com"><img src="images/facebook.webp" alt="Facebook logo" width="36"
+            <a href="https://facebook.com"><img loading="lazy" src="images/facebook.webp" alt="Facebook logo" width="36"
                     height="36"></a>
-            <a href="https://instagram.com"><img src="images/social.webp" alt="Instagram logo" width="36"
+            <a href="https://instagram.com"><img loading="lazy" src="images/social.webp" alt="Instagram logo" width="36"
                     height="36"></a>
-            <a href="https://x.com"><img src="images/twitter.webp" alt="x logo" width="36" height="36"></a>
+            <a href="https://x.com"><img loading="lazy" src="images/twitter.webp" alt="x logo" width="36" height="36"></a>
         </div>
         <div class="copy-container">
             <p>&copy; <span id="copyright-year"></span> | Hans Barredo | Philippines</p>
